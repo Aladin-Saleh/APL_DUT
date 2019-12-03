@@ -26,7 +26,7 @@ int main(int argc, char const *argv[])
 		fread(&pseudo,sizeof(char),3,flux);
 		printf("%.9d %s\n",stck,pseudo );
 	}
-
+fclose(flux);
 
 	return 0;
 }
