@@ -9,6 +9,7 @@ int main(int argc, char const *argv[])
 	char pseudo[3];
 	FILE* flux = NULL;
 	flux = fopen("top10","r");
+	flux = fopen("top10","w");
 	if ( flux != NULL)
 	{
 		
@@ -24,8 +25,11 @@ int main(int argc, char const *argv[])
 	{
 		fread(&stck,sizeof(int),1,flux);
 		fread(&pseudo,sizeof(char),3,flux);
+		
 		printf("%.9d %s\n",stck,pseudo );
 	}
+
+
 fclose(flux);
 
 	return 0;
