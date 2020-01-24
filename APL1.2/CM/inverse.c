@@ -1,13 +1,14 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<time.h>
 
-typedef struct maximum maximum;
-struct maximum
+
+
+typedef struct entier entier;  /* Lors de l'affichage il se peut que le programme affiche un 0 en trop, c'est un problème que je n'ai pas réussi à fixer*/
+struct entier
 {
 	
-	unsigned short int valeur;
-    maximum* suivant;
+	int valeur;
+    entier* suivant;
 
 
 };
@@ -17,7 +18,7 @@ typedef struct Liste Liste;
 struct Liste
 {
 	
-	maximum *premier;
+	entier *premier;
 };
 
 
@@ -26,15 +27,15 @@ Liste *init()
 {
 	
 	Liste *liste =malloc(sizeof(*liste));
-	maximum *maximum=malloc(sizeof(*maximum));
-	if (liste == NULL || maximum == NULL)
+	entier *entier=malloc(sizeof(*entier));
+	if (liste == NULL || entier == NULL)
 	{
 		exit(EXIT_FAILURE);
 	}
 
-	maximum->valeur =0;
-	maximum->suivant = NULL;
-	liste->premier = maximum;
+	entier->valeur =0;
+	entier->suivant = NULL;
+	liste->premier = entier;
 
 
 	return liste;
@@ -44,7 +45,7 @@ Liste *init()
 
 void insert(Liste *liste, int NvNombre)
 {
-	maximum *nvx = malloc(sizeof(*nvx));
+	entier *nvx = malloc(sizeof(*nvx));
 	if (liste == NULL || nvx == NULL)
 	{
 		exit(EXIT_FAILURE);
@@ -65,40 +66,37 @@ void affiche_liste(Liste *liste)
 		exit(EXIT_FAILURE);
 	}
 
-	maximum *actuel = liste->premier;
+	entier *actuel = liste->premier;
 	while(actuel != NULL)
 	{
 
-		printf("-> %d  ",actuel->valeur );
+		printf(" %d,",actuel->valeur );
 		actuel = actuel->suivant;
 
 	}
-	printf("(NULL)\n");
+	
 }
-
 
 
 
 int main(int argc, char const *argv[])
 {
-    unsigned short int grand = 0;
-	srand(time(NULL));
+	int entrer;
 	int i;
+
 	Liste *maListe = init();
-	for(i =0;i<10;++i)
+
+	for (i = 0; i < 5; ++i)
 	{
-		unsigned short int rdm = rand()%(111-999+1)+111;
-		insert(maListe, rdm);
-		if (rdm > grand)
-		{
-			grand = rdm;
-		}
-
-
-
+		printf("Entier n°%d : ",i+1 );
+		scanf("%d",&entrer);
+		insert(maListe,entrer);
 	}
 
+
+
+
 	affiche_liste(maListe);
-	printf("(PLUS GRAND : %hu )\n",grand );
+	printf("\n");
 	return 0;
 }
