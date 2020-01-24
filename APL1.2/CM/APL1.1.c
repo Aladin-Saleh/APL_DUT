@@ -83,7 +83,7 @@ return salMyn;
 
 }
 
-
+double sal_moy2
 
 
 int main(int argc, char const *argv[])
