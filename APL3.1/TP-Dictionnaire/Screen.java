@@ -46,7 +46,7 @@ public Screen()
 
 
 
-            panAfficheColor.setBackground(Color.BLACK);
+        panAfficheColor.setBackground(Color.BLACK);
             
         this.add(listC,BorderLayout.WEST);
         this.add(panAfficheColor,BorderLayout.EAST);
