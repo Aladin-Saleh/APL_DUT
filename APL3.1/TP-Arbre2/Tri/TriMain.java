@@ -10,6 +10,7 @@ public class TriMain
             entier[i] = Integer.parseInt(args[i]);
         }
         Arbre monArbre = new Arbre(entier);
+        
 
     }
 }
