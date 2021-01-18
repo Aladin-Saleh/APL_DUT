@@ -18,13 +18,14 @@ public class Auth
 
 	public void deleteUser(String login)
 	{
-		//Cette méthode permet de supprimer un untilisateur de la map
+		//Cette méthode permet de supprimer un utilisateur de la map
 		//On supprime la clé qui est le login 
 
 		if (authentificationMap.remove(login,authentificationMap.get(login))) 
 		{
 			//Si l'element à bien été supprimé (et dans ce cas il existe alors cela aura retourné true) alors on affiche le message de suppression
-			System.out.println("Utilisateur \"" + login + "\" retiré");
+			System.out.println("Utilisateur \"" + login + "\" retiré " +authentificationMap );
+			authentificationMap.remove(login,authentificationMap.get(login));
 
 		}
 		else
@@ -40,7 +41,7 @@ public class Auth
 
 	public void authUser(String login,String password)
 	{
-		if (authentificationMap.get(login) == null) {
+		if (authentificationMap.get(login) != null) {
 			System.out.println("Utilisateur \"" + login + "\" reconnu");
 		}
 		else
