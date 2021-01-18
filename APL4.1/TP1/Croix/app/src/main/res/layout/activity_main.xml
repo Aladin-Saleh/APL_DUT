@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        />
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ok" />
+
+    </LinearLayout>
+
+</LinearLayout>-->
+<!--
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/maintext"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <EditText
+        android:id="@+id/text2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/maintext"
+        android:layout_marginBottom="-40dp"
+        android:layout_weight="3" />
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/text2"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="1dp"
+        android:layout_toEndOf="@+id/text2"
+        android:layout_toRightOf="@+id/text2"
+        android:text="Ok" />
+
+</RelativeLayout>-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="101dp"
+        android:layout_height="88dp"
+        android:layout_centerHorizontal="true"
+        android:text="^" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="101dp"
+        android:layout_height="88dp"
+        android:layout_centerHorizontal="true"
+        android:text="O"
+        android:layout_below="@+id/button"
+        />
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="101dp"
+        android:layout_height="88dp"
+        android:layout_centerHorizontal="true"
+        android:text=">"
+        android:layout_toRightOf="@+id/button2"
+        android:layout_below="@+id/button"
+        />
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="101dp"
+        android:layout_height="88dp"
+        android:layout_centerHorizontal="true"
+        android:text="5"
+        android:layout_toLeftOf="@+id/button2"
+        android:layout_below="@+id/button"
+        />
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="101dp"
+        android:layout_height="88dp"
+        android:layout_centerHorizontal="true"
+        android:text="v"
+        android:layout_below="@+id/button2"
+        />
+</RelativeLayout>

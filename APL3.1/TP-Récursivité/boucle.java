@@ -8,6 +8,7 @@ public class boucle
 
         if(ind < i)
         {
+            //Action de la boucle ici
             ind++;
             System.out.println("incremantation : " + ind);
             

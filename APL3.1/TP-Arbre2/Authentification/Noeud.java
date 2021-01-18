@@ -30,20 +30,7 @@ public class Noeud
                     this.gauche = new Noeud(log,pswrd);
                 }
             }
-            else if(this.valeurNoeud < nvValeur)
-            {
-            //Si la valeur dans le noeud est plus petite que la nouvelle valeur on la place à gauche 
-                if(this.gauche != null)
-                {
-                 //Si le noeud de gauche n'est pas vide 
-                    this.gauche.add(nvValeur);    
-                }
-                else
-                {
-                 
-                    this.gauche = new Noeud(nvValeur);
-                }
-            }
+         
     }
 
 

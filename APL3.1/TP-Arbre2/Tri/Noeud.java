@@ -52,7 +52,7 @@ public class Noeud {
     {
         if(this.gauche != null && this.droite != null)
         {
-            return this.gauche.toString() + " " + this.valeurNoeud + " " + this.droite.toString();
+            return this.droite.toString() + " " + this.valeurNoeud + " " + this.gauche.toString();
         }
         else if(this.gauche != null)
         {
